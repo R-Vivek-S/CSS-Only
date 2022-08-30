@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: borderbox;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color: #330055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg fill-opacity='0.65'%3E%3Ccircle fill='%23330055' cx='50' cy='0' r='50'/%3E%3Cg fill='%233b005d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23420064' cx='50' cy='100' r='50'/%3E%3Cg fill='%234a006c' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23520074' cx='50' cy='200' r='50'/%3E%3Cg fill='%235a007c' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23620084' cx='50' cy='300' r='50'/%3E%3Cg fill='%236a008d' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23730095' cx='50' cy='400' r='50'/%3E%3Cg fill='%237b009d' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%238400a6' cx='50' cy='500' r='50'/%3E%3Cg fill='%238c00ae' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%239500b7' cx='50' cy='600' r='50'/%3E%3Cg fill='%239e00c0' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a600c9' cx='50' cy='700' r='50'/%3E%3Cg fill='%23af00d2' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b800db' cx='50' cy='800' r='50'/%3E%3Cg fill='%23c100e4' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23cb00ed' cx='50' cy='900' r='50'/%3E%3Cg fill='%23d400f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23D0F' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+.container {
+  width: 27vw;
+  aspect-ratio: 1/1;
+}
+
+.tilt-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+}
+
+.tilt-wrapper:hover {
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+}
+
+.sense {
+  width: 33.333%;
+  height: 33.333%;
+  position: absolute;
+  z-index: 1;
+}
+
+.sense:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.sense:nth-child(2) {
+  left: 33.333%;
+  top: 0;
+}
+
+.sense:nth-child(3) {
+  left: 66.666%;
+  top: 0;
+}
+
+.sense:nth-child(4) {
+  left: 0;
+  top: 33.333%;
+}
+
+.sense:nth-child(5) {
+  left: 33.333%;
+  top: 33.333%;
+}
+
+.sense:nth-child(6) {
+  left: 66.666%;
+  top: 33.333%;
+}
+
+.sense:nth-child(7) {
+  left: 0;
+  top: 66.666%;
+}
+
+.sense:nth-child(8) {
+  left: 33.333%;
+  top: 66.666%;
+}
+
+.sense:nth-child(9) {
+  left: 66.666%;
+  top: 66.666%;
+}
+
+.sense:nth-child(1):hover ~ .tiltbox {
+  transform: rotateX(-20deg) rotateY(20deg);
+}
+
+.sense:nth-child(2):hover ~ .tiltbox {
+  transform: rotateX(-20deg) rotateY(0deg);
+}
+
+.sense:nth-child(3):hover ~ .tiltbox {
+  transform: rotateX(-20deg) rotateY(-20deg);
+}
+
+.sense:nth-child(4):hover ~ .tiltbox {
+  transform: rotateX(0deg) rotateY(20deg);
+}
+
+.sense:nth-child(5):hover ~ .tiltbox {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.sense:nth-child(6):hover ~ .tiltbox {
+  transform: rotateX(0deg) rotateY(-20deg);
+}
+
+.sense:nth-child(7):hover ~ .tiltbox {
+  transform: rotateX(20deg) rotateY(20deg);
+}
+
+.sense:nth-child(8):hover ~ .tiltbox {
+  transform: rotateX(20deg) rotateY(0deg);
+}
+
+.sense:nth-child(9):hover ~ .tiltbox {
+  transform: rotateX(20deg) rotateY(-20deg);
+}
+
+.tiltbox {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  transition: all 0.6s ease-out;
+  transform: rotateX(0deg) rotateY(0deg);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0.7px 3.5px 3.2px rgba(0, 0, 0, 0.032), 1.7px 8.3px 7.6px rgba(0, 0, 0, 0.046), 3.1px 15.7px 14.3px rgba(0, 0, 0, 0.057), 5.6px 27.9px 25.5px rgba(0, 0, 0, 0.069), 10.4px 52.2px 47.6px rgba(0, 0, 0, 0.083), 25px 125px 114px rgba(0, 0, 0, 0.11);
+}
+
+.profcontainer {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10%;
+}
+.profcontainer .dp {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  border: 5px solid beige;
+  background-image: url(images/profile-pic.png);
+  background-size: contain;
+  box-shadow: 0.7px 3.5px 3.2px rgba(0, 0, 0, 0.032), 1.7px 8.3px 7.6px rgba(0, 0, 0, 0.046), 3.1px 15.7px 14.3px rgba(0, 0, 0, 0.057), 5.6px 27.9px 25.5px rgba(0, 0, 0, 0.069), 10.4px 52.2px 47.6px rgba(0, 0, 0, 0.083), 25px 125px 114px rgba(0, 0, 0, 0.11);
+}
+.profcontainer .texts {
+  width: 100%;
+  color: beige;
+  font-family: "Poppins", sans-serif;
+}
+.profcontainer .name {
+  font-weight: 600;
+  font-size: 2.642vw;
+}
+.profcontainer .bio {
+  margin-top: 1%;
+  font-size: 1.2vw;
+}
+.profcontainer .links {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=main.css.map */

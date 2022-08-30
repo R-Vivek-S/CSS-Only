@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+}

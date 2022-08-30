@@ -17,9 +17,14 @@ body{
 }
 
 .card{
-    width: 400px;
-    height: 500px;
+    max-width: 400px;
+    width: 58vw;
+    /* height: 500px; */
     position: relative;
+    cursor: pointer;
+    aspect-ratio: 4/5;
+
+    perspective: 1000px;
 }
 
 .items{
@@ -28,15 +33,19 @@ body{
     transition: transform 3s;
     transform-style: preserve-3d;
     height: 100%;
+
+    display: grid;
+    place-items: center;
 }
 
-.card:hover .items {
-    transform: rotateY(.5turn);
+.card:hover .items{
+    
+    transform: rotateY(180deg);
   }
 
 .front{
     height: 100%;
-    width: 100%;
+    width: 75%;
     backface-visibility: hidden;
     position: absolute;
     transform: translateZ(100px);
@@ -44,19 +53,19 @@ body{
 }
 
 #hh{
-    margin-top: 230px;
-    font-size: 2.1em;
+    margin-top: 90%;
+    /* font-size: 2.1em; */
 }
 
 .square{
-    height: 450px;
-    width:350px;
+    height: 85%;
+    width: 85%;
     position: absolute;
     border:3px solid black;
     transform: translateZ(40px);
     border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 25px;
+    /* margin-top: 25px;
+    margin-left: 25px; */
     padding-top: 40%;
 
     background: #fff9a00f;
@@ -79,6 +88,9 @@ body{
 
     border-top: solid #ffffff66 5px;
     border-left: solid #ffffff66 5px;
+
+    box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 4%), 6.7px 6.7px 5.3px rgb(0 0 0 / 6%), 12.5px 12.5px 10px rgb(0 0 0 / 7%), 22.3px 22.3px 17.9px rgb(0 0 0 / 8%), 41.8px 41.8px 33.4px rgb(0 0 0 / 10%), 100px 100px 80px rgb(0 0 0 / 14%);
+    backface-visibility: hidden;
 }
 
 .backbg{
@@ -88,11 +100,15 @@ body{
     background-image: url("BG/26180.webp");
     background-position: center;
     background-size: cover;
-    transform:translateZ(-1px) ;
+    /* transform:translateZ(-1px) ; */
     border-radius: 10px;
     
     border-top: solid #ffffff66 5px;
-    border-right: solid #ffffff66 5px;
+    border-left: solid #ffffff66 5px;
+
+    box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 4%), 6.7px 6.7px 5.3px rgb(0 0 0 / 6%), 12.5px 12.5px 10px rgb(0 0 0 / 7%), 22.3px 22.3px 17.9px rgb(0 0 0 / 8%), 41.8px 41.8px 33.4px rgb(0 0 0 / 10%), 100px 100px 80px rgb(0 0 0 / 14%);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 .food{
