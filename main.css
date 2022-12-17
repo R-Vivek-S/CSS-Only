@@ -7,9 +7,58 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.container{
+/* .container{
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-auto-rows: 240px;
+} */
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #181a1b;
 }
+.masonry { 
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-left: -8px; Adjustment for the gutter */
+    width: 50%;
+  }
+  
+  .masonry-brick {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    min-width: 150px;
+    margin: 15px 0px 0px 0; /* Some gutter */
+  }
+
+  /* .masonry-brick:nth-child(4n+1) {
+    width: 360px;
+  }
+  .masonry-brick:nth-child(4n+1):nth-child(4n+2) {
+    width: 325px;
+  }
+  .masonry-brick:nth-child(4n+1):nth-child(4n+3) {
+    width: 180px;
+  }
+  .masonry-brick:nth-child(4n+1):nth-child(4n+4) {
+    width: 380px;
+  } */
+
+
+
+  a:visited{
+    color: rgb(0, 0, 0);
+  }
+
+  video{
+    height: 100%;
+    border: 5px solid;
+    border-radius: 20px;
+  }
