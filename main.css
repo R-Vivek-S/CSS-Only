@@ -25,7 +25,8 @@ background-color: #181a1b;
     display: flex;
     flex-flow: row wrap;
     /* margin-left: -8px; Adjustment for the gutter */
-    width: 50%;
+    width: 42%;
+    height: 100%;
   }
   
   .masonry-brick {
@@ -35,7 +36,10 @@ background-color: #181a1b;
     justify-content: center;
     height: 200px;
     min-width: 150px;
+    border-radius: 20px;
     margin: 15px 0px 0px 0; /* Some gutter */
+    transition-duration: 0.3s;
+    object-fit: cover;
   }
 
   /* .masonry-brick:nth-child(4n+1) {
@@ -59,6 +63,7 @@ background-color: #181a1b;
 
   video{
     height: 100%;
-    border: 5px solid;
+    border: 2px solid;
     border-radius: 20px;
+    z-index: -1;
   }
