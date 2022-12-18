@@ -56,7 +56,9 @@ background-color: #181a1b;
   } */
 
 
-
+  a:link{
+    color: black;
+  }
   a:visited{
     color: rgb(0, 0, 0);
   }
